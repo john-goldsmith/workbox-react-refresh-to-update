@@ -1,0 +1,26 @@
+{
+  "short_name": "Workbox PoC",
+  "name": "Workbox PoC",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#44A1A3",
+  "background_color": "#ffffff",
+  "source": "/"
+}

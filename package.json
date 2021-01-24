@@ -1,0 +1,153 @@
+{
+  "name": "workbox-react-refresh-to-update",
+  "version": "1.0.0",
+  "description": "Workbox + React 'Refresh-to-update'",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.production.js",
+    "serve": "node server.js",
+    "start": "webpack-dev-server --open --config webpack.development.js",
+    "lint": "eslint --ext js,jsx,ts,tsx src",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier \"**/*.{js,jsx,ts,tsx,css,json,scss}\"",
+    "format": "npm run prettier -- --write",
+    "validate": "npm run prettier -- --list-different && npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,css,scss}": [
+      "npm run format",
+      "npm run lint:fix"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react-hooks/recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "import",
+      "react",
+      "eslint-plugin-prettier"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "rules": {
+      "arrow-body-style": [
+        "error",
+        "as-needed"
+      ],
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            "tsx"
+          ]
+        }
+      ],
+      "no-unused-expressions": 2,
+      "max-len": 0,
+      "import/no-extraneous-dependencies": 0,
+      "react/destructuring-assignment": 0,
+      "react/prop-types": 0,
+      "quotes": [
+        2,
+        "single",
+        {
+          "avoidEscape": true
+        }
+      ]
+    },
+    "parserOptions": {
+      "ecmaVersion": 9,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.test.js"
+        ],
+        "rules": {
+          "no-unused-expressions": "off"
+        }
+      }
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "workbox-window": "6.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.11.6",
+    "@babel/plugin-transform-runtime": "7.11.5",
+    "@babel/preset-env": "7.11.5",
+    "@babel/preset-react": "7.10.4",
+    "@babel/preset-typescript": "7.10.4",
+    "@babel/runtime": "7.11.2",
+    "@types/react": "16.9.51",
+    "@types/react-dom": "16.9.8",
+    "@typescript-eslint/eslint-plugin": "4.4.0",
+    "@typescript-eslint/parser": "4.4.0",
+    "babel-loader": "8.1.0",
+    "clean-webpack-plugin": "3.0.0",
+    "copy-webpack-plugin": "6.1.0",
+    "core-js": "3.6.5",
+    "css-loader": "4.2.2",
+    "dotenv": "8.2.0",
+    "dotenv-webpack": "2.0.0",
+    "eslint": "7.8.1",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-react": "7.20.6",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "file-loader": "6.1.0",
+    "fs-extra": "9.0.1",
+    "html-loader": "1.3.0",
+    "html-webpack-plugin": "4.4.1",
+    "husky": "4.2.5",
+    "identity-obj-proxy": "3.0.0",
+    "json5-loader": "4.0.0",
+    "lint-staged": "10.3.0",
+    "node-sass": "4.14.1",
+    "path": "0.12.7",
+    "prettier": "2.1.1",
+    "prop-types": "15.7.2",
+    "sass-loader": "10.0.2",
+    "style-loader": "1.2.1",
+    "typescript": "4.0.3",
+    "url-loader": "4.1.0",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0",
+    "webpack-merge": "5.1.3",
+    "workbox-webpack-plugin": "5.1.3"
+  }
+}

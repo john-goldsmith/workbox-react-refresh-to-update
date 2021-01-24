@@ -1,0 +1,12 @@
+coverage/
+dist/
+node_modules/
+src/**/*.scss
+static/**/*.css
+src/**/*.mdx
+
+test/
+
+ios/
+android/
+.gradle/
